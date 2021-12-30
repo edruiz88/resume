@@ -5,9 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
-    "deploy": "gh-pages -d src",
-    "build": "webpack",
+    "node": "16.x",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
