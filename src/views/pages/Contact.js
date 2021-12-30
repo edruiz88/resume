@@ -11,7 +11,7 @@ function Contact(){
       const formData = {name:name,email:email,msg:msg}
       await axios({
          method:'POST',
-         url:'http://192.168.0.183:3000/sendmail',
+         url:'http://0.0.0.0/sendmail',
          data:formData,
          headers: {'Content-Type': 'application/json'}
      })
