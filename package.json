@@ -6,8 +6,9 @@
     "node": "16.x"
   },
   "description": "",
-  "main": "index.js",
+  "main": "app",
   "scripts": {
+    "predeploy":"npm run start",
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
