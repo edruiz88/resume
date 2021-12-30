@@ -2,10 +2,13 @@
   "homepage":"https://edruiz88.github.io/resume",
   "name": "resumefast",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node": "16.x",
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
