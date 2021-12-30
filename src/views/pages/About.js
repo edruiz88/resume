@@ -1,12 +1,16 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 function About(){
+  const history = useHistory()
 
   const services = [{icon:'', title:'Development', desc:'Creation of code and custom components adapted to the needs of the app.'},
                     {icon:'', title:'Optimization', desc:'Reduce loading time and limit the use of external libraries.'},
                     {icon:'', title:'SEO', desc:'Search Engine Optimization and web development combined to create a SEO-friendly website.'},
                     {icon:'', title:'ReDesign', desc: `Redesign of the app to adapt it to the client's needs. `}]
-
+  const hire=()=>{
+    history.push("/contact");
+  }
   return (
 
       <div className='section-content'>
@@ -32,7 +36,7 @@ function About(){
               </div>
               <div className="about-btns">
                 <button className="btn btn-about download"><i className="icon-cloud-download"></i>Download CV</button>
-                <button className="btn btn-about hire"><i className="icon-envelope"></i>Hire Me</button>
+                <button className="btn btn-about hire" onClick={()=>hire()}><i className="icon-envelope"></i>Hire Me</button>
               </div>
           </div>
         </div>
