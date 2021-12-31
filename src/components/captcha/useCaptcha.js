@@ -185,7 +185,7 @@ const drawPuzzle = useCallback((ctx, ctx2, cx, cy) => {
       var y = (top) + (eye.offsetHeight / 2);
       var rad = Math.atan2(e.pageX - x, e.pageY - y);
       var rot = (rad * (180 / Math.PI) * -1) + 180;
-      setRdrRot(rot)
+      setRdrRot(rot);
     }
   }, []);
   //load image onShow
