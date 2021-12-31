@@ -181,11 +181,11 @@ const drawPuzzle = useCallback((ctx, ctx2, cx, cy) => {
     if(!e.touches&&!show){
       var eye = radar.current;
       const {top, left} = eye.getBoundingClientRect()
-      var x = (left) + (eye.offsetWidth / 2);
-      var y = (top) + (eye.offsetHeight / 2);
-      var rad = Math.atan2(e.pageX - x, e.pageY - y);
-      var rot = (rad * (180 / Math.PI) * -1) + 180;
-      setRdrRot(rot);
+      var x = (left) + (eye.offsetWidth / 2)
+      var y = (top) + (eye.offsetHeight / 2)
+      var rad = Math.atan2(e.pageX - x, e.pageY - y)
+      var rot = (rad * (180 / Math.PI) * -1) + 180
+      setRdrRot(rot)
     }
   }, []);
   //load image onShow
