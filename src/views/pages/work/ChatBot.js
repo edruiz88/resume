@@ -11,7 +11,7 @@ const About=()=>{
     const [show, setShow] = useState(false)
     // const [anim, setAnim] = useState(false)
     const [member, setMember] = useState([])
-    const [placeBtns, setPlaceBtns] = useState(['I’m a BitNow customer with a question.','I’d like to learn more about BitNow','Just browsing!'])
+    const [placeBtns, setPlaceBtns] = useState(['I’m a BusyBit customer with a question.','I’d like to learn more about BusyBit','Just browsing!'])
     const msg = useRef()
     const empty = msgs=='*'
 
@@ -73,8 +73,8 @@ const About=()=>{
 
               <div className={'header-cntnr'}>
                 <div className={`header-item${show&&init==1?' show':''}`} style={{opacity:init==2?0:1}}>
-                  <h1>Hola</h1>
-                  <h6>Hacemos que la comunicación entre negocios y personas sea sencilla y fluida.</h6>
+                  <h1>Hello!</h1>
+                  <h6>We facilitate understanding between businesses and clients in a simple and fluid way.</h6>
                 </div>
               </div>
             </div>
@@ -103,7 +103,15 @@ const About=()=>{
                         <div className="input-append d-flex"><Icon.Right/></div>
                       </div>
                     </div>
-                    <div className={'chatbot-cards'}></div>
+                    <div className={'chatbot-cards'}>
+                      <div className={'status-content'}>
+                        <Icon.CircleCheck color={'green'}/>
+                        <div className={'status-info'}>
+                          <div className={'status'}>Status: All Systems Operational</div>
+                          <div className={'updated'}>Updated Dec 31, 12:39 UTC</div>
+                        </div>
+                      </div>
+                    </div>
                     <div className={'chatbot-cards'}></div>
                   </div>
                 </div>
@@ -122,7 +130,7 @@ const About=()=>{
               </div> )}
               {placeBtns[0]&&<div className={'place-cntnr'} style={{top:`${80-((placeBtns.length+1)*8)}%`}}>
                   <div className={'chat-placeholder muted mb-2'} style={{opacity:empty?1:0}}>
-                    👋  Hi there! Welcome to BitNow - the future of P2P transactions. Want to find out more about BitNow?
+                    👋  Hi there! Welcome to BusyBit - the future of P2P transactions. Want to find out more about BusyBit?
                   </div>
                   <div className={'btns-placeholder'}>
                     {placeBtns.map((d,i)=>

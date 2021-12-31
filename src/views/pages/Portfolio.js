@@ -22,7 +22,7 @@ const Portfolio = () =>{
         {title:'Text Editor', term:'creative, UX, Security', img:'texteditor'},
         {title:'Line Chart', term:'creative, design', img:'linechart'},
         {title:'Feedback', term:'branding, art', img:'feedback'},
-        {title:'ChatBot', term:'design, UX, creative', img:'captcha'}]
+        {title:'ChatBot', term:'design, UX, AI', img:'chatbot'}]
 
     const closeMenu=(e)=>{
         if (fltr.current && !fltr.current.contains(e.target)) {

@@ -45,7 +45,7 @@ const reset=()=>{
                   </div>
                   <UseCaptcha isOk={e=>seIsOk(e)} anim={anim}/>
                   <div className="d-flex space">
-                    <div className={`btn btn-secondary`} onClick={()=>reset()} style={{visibility:isOk?'visible':'hidden'}}>Reset</div>
+                    {/* <div className={`btn btn-secondary`} onClick={()=>reset()} style={{visibility:isOk?'visible':'hidden'}}>Reset</div> */}
                     <div className={`btn btn-primary${!isOk?' disabled':''}`} onClick={()=>testSubmit()}>Submit</div>
                   </div>
                 </form>:
