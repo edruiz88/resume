@@ -46,18 +46,17 @@ fastify.post('/sendmail', (req, reply, next) => {
   var textBody = `FROM: ${req.body.name} EMAIL: ${req.body.email} MESSAGE: ${req.body.msg}`;
 	var htmlBody = `<h2>Mail From Contact Form</h2><p>from: ${req.body.name} <a href="mailto:${req.body.email}">${req.body.email}</a></p><p>${req.body.msg}</p>`;
 
-  nodemailer.sendMail({
-    from: 'sender@example.com',
-    to: recipient,
-		subject: "Mail From Contact Form", // Subject line
-		text: textBody,
-		html: htmlBody
-  }, (err, info) => {
-    if (err) next(err)
-    reply.send({
-      messageId: info.messageId
+    nodemailer.sendMail({
+      from: 'sender@example.com',
+      to: recipient,
+      subject: "Mail From Contact Form", // Subject line
+      text: textBody,
+      html: htmlBody
+    }, (err, info) => {
+      if (err) next(err)
+      reply.code(201).send({type:'Success', message: 'Thanks for contacting me!', data:info});
     })
-  })
+
 })
 
 // Run the server!
