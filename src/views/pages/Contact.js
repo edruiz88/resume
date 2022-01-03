@@ -13,16 +13,18 @@ function Contact(){
       const formData = {name:name,email:email,subject:subject,msg:msg}
       await axios({
          method:'POST',
-         url:'https://eruiz.herokuapp.com/sendmail',
+         url:'http://eruiz.herokuapp.com/sendmail',
          data:formData,
          headers: {'Content-Type': 'application/json'}
      })
      .then((res)=>{
+      console.log(res.data)
+      console.log(res.data);
             res.data.type == 'Success'? setSuccess(true)
             :console.log(res.data);
         }).catch((err)=>{console.log(err)});
    }
-   
+
   return (
       <div className="section-content d-flex top">
 
@@ -60,7 +62,7 @@ function Contact(){
 
           </div>
       
-          {!success?<div className="contact-form-wrapper">
+         <div className="contact-form-wrapper">
 
               <div className="inline-inputs">
                 <div className="form-group">
@@ -80,15 +82,6 @@ function Contact(){
               </div>
               <button type="submit"  onClick={()=>sendEmail()} className="btn btn-about hire">Submit Message</button>  
           </div>
-          :
-          <div className='expandd' style={{textAlign:'center',marginTop:'30px',position:'relative',width:'100%',height:'100%',top:'0px',left:'0px'}}>
-            <div className="check-circle">
-               <div className="circle d-flex" /*dangerouslySetInnerHTML={{__html:'&#x2714'}}*/>🎊</div>
-            </div>
-            <h1>Congratulations!</h1>
-            <p>You are all set. Well done!</p>
-            <div className="btn btn-success" onClick={()=>reset()}>Try Again</div>
-         </div>}
         </div>
           
   )
