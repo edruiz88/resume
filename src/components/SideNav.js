@@ -26,7 +26,7 @@ return (
           </ul>
 
           <div className="side-buttons">
-            <button className="btn-cv" onClick={()=>window.open('docs/eduardoCV.pdf', '_blank')}>Download CV</button>
+            <button className="btn-cv" onClick={()=>window.open('https://eruiz.herokuapp.com/docs/eduardoCV.pdf', '_blank')}>Download CV</button>
           </div>
 
           <div className="copyrights">© 2020 All rights reserved.</div>
