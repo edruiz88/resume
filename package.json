@@ -7,7 +7,7 @@
   "description": "",
   "main": "app",
   "scripts": {
-    "predeploy":"npm run start",
+    "predeploy": "npm run start",
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
     "axios": "^0.21.4",
     "babel-loader": "^8.2.2",
     "fastify": "^3.21.6",
+    "fastify-cors": "^6.0.2",
     "fastify-nodemailer": "^5.0.0",
     "fastify-static": "^4.2.3",
     "http": "0.0.1-security",

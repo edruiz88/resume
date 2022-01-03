@@ -5,18 +5,24 @@ import * as Icon from '../../components/icons'
 function Contact(){
    const [name, setName] = useState('')
    const [email, setEmail] = useState('')
+   const [subject, setSubject] = useState('')
    const [msg, setMsg] = useState('')
+   const [success, setSuccess] = useState(false)
 
    const sendEmail= async ()=>{
-      const formData = {name:name,email:email,msg:msg}
+      const formData = {name:name,email:email,subject:subject,msg:msg}
       await axios({
          method:'POST',
-         url:'http://0.0.0.0/sendmail',
+         url:'https://eruiz.herokuapp.com/sendmail',
          data:formData,
          headers: {'Content-Type': 'application/json'}
      })
+     .then((res)=>{
+            res.data.type == 'Success'? setSuccess(true)
+            :console.log(res.data);
+        }).catch((err)=>{console.log(err)});
    }
-
+   
   return (
       <div className="section-content d-flex top">
 
@@ -24,7 +30,7 @@ function Contact(){
            
                <div className="contact-info-container mb-4">
                   <div className="contact-info">
-                     <Icon.Paypal/>
+                     <Icon.Phone/>
                      <div className="details">
                         <h5>Phone</h5>
                         <span>+58 424 668-6370</span>
@@ -54,7 +60,7 @@ function Contact(){
 
           </div>
       
-          <div className="contact-form-wrapper">
+          {!success?<div className="contact-form-wrapper">
 
               <div className="inline-inputs">
                 <div className="form-group">
@@ -66,7 +72,7 @@ function Contact(){
               </div>
 
               <div className="form-group">
-                <input type="text" name="your-name" className="form-control" placeholder="Subject"/>
+                <input type="text" name="your-name" className="form-control" onChange={e=>setSubject(e.target.value)} placeholder="Subject"/>
               </div>
               
               <div className="form-group">
@@ -74,6 +80,15 @@ function Contact(){
               </div>
               <button type="submit"  onClick={()=>sendEmail()} className="btn btn-about hire">Submit Message</button>  
           </div>
+          :
+          <div className='expandd' style={{textAlign:'center',marginTop:'30px',position:'relative',width:'100%',height:'100%',top:'0px',left:'0px'}}>
+            <div className="check-circle">
+               <div className="circle d-flex" /*dangerouslySetInnerHTML={{__html:'&#x2714'}}*/>🎊</div>
+            </div>
+            <h1>Congratulations!</h1>
+            <p>You are all set. Well done!</p>
+            <div className="btn btn-success" onClick={()=>reset()}>Try Again</div>
+         </div>}
         </div>
           
   )

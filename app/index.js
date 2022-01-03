@@ -7,6 +7,12 @@ fastify.register(require('fastify-static'), {
   prefix: '*', // optional: default '/'
 })
 
+fastify.register(require('fastify-cors'), {
+  origin: "https://eruiz.herokuapp.com/",
+  methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+  credentials: true
+});
+
 //register template engine
 fastify.register(require('point-of-view'), {
   engine: {
@@ -57,7 +63,7 @@ fastify.post('/sendmail', (req, reply, next) => {
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(process.env.PORT || 3000, '0.0.0.0')
+    await fastify.listen(process.env.PORT || 3000)
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
