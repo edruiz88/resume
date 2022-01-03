@@ -22,7 +22,7 @@ function About(){
           <div className="about-me">
               <h2 className="about-head">Hello,</h2>
               <div className="about-text">
-                <p>I'm Eduardo Ruiz, a Full-Stack web developer from Venezuela. I have experience creating and customizing websites, optimizing its code in order to reduce loading time by a considerable percentage, reducing the use of external libraries without compromising security.</p>
+                <p>I'm Eduardo Ruiz, a Full-Stack web developer from Venezuela. I have experience creating and customizing websites, optimizing its code to reduce loading time in order to improve the UX.</p>
               </div>
               <div className="about-info d-flex">
                 <div className="about-date">
@@ -35,7 +35,7 @@ function About(){
                 </div>
               </div>
               <div className="about-btns">
-                <button className="btn btn-about download"><i className="icon-cloud-download"></i>Download CV</button>
+                <button className="btn btn-about download" onClick={()=>window.open('docs/eduardoCV.pdf', '_blank')}><i className="icon-cloud-download"></i>Download CV</button>
                 <button className="btn btn-about hire" onClick={()=>hire()}><i className="icon-envelope"></i>Hire Me</button>
               </div>
           </div>
