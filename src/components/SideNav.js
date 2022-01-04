@@ -20,13 +20,13 @@ return (
           {props.sidemenu}
 
           <ul className="side-socials">
-            <li className={`social-icon`}><NavLink to="https://www.linkedin.com/in/eduardo-ruiz-42048121b" target="_blank"><props.icon.LinkedIn/></NavLink></li>
+            <li className={`social-icon`}><a href="https://www.linkedin.com/in/eduardo-ruiz-42048121b" target="_blank"><props.icon.LinkedIn/></a></li>
             <li className={`social-icon`}><NavLink to="#" target="_blank"><props.icon.Facebook/></NavLink></li>
             <li className={`social-icon`}><NavLink to="#" target="_blank"><props.icon.Twitter/></NavLink></li>
           </ul>
 
           <div className="side-buttons">
-            <button className="btn-cv" onClick={()=>window.open('https://eruiz.herokuapp.com/docs/eduardoCV.pdf', '_blank')}>Download CV</button>
+            <a className={'btn-cv'} href={'/docs/eduardoCV.pdf'} target="_blank">Download CV</a>
           </div>
 
           <div className="copyrights">© 2020 All rights reserved.</div>
