@@ -20,7 +20,7 @@ function Contact(){
       setLoading(true)
       await axios({
          method:'POST',
-         url:'http://eruiz.herokuapp.com/sendmail',
+         url:'https://eruiz.herokuapp.com/sendmail',
          data:formData,
          headers: {'Content-Type': 'application/json'}
      })
