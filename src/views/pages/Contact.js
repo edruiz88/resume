@@ -74,8 +74,8 @@ function Contact(){
                   <div className="circle d-flex" /*dangerouslySetInnerHTML={{__html:'&#x2714'}}*/>✔</div>
                </div>
                <h1>Thank you!</h1>
-               <div>I appreciate the you've taken the time to write me.</div>
-               <div>I'll get back to you very soon.'</div>
+               <div>I appreciate that you've taken the time to write me.</div>
+               <div>I'll get back to you very soon.</div>
                {/* <div className="btn btn-success" onClick={()=>reset()}>Try Again</div> */}
             </div>}
         </div>
