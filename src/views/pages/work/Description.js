@@ -8,8 +8,8 @@ const Description =props=>{
         </div>
         <ul className="work-info">
             <li><p><i className="fa fa-user"></i> Eduardo Ruiz</p></li>
-            <li><p><i className="fa fa-globe"></i> <a href="#" target="_blank">www.busybit.site</a></p></li>
-            <li><p><i className="fa fa-calendar"></i> 25 december, 2016</p></li>
+            <li><p><i className="fa fa-globe"></i> <a href="#" target="_blank">own project</a></p></li>
+            <li><p><i className="fa fa-calendar"></i> 25 october, 2016</p></li>
         </ul>
 
         <p className="text-justify">{props.desc}</p>
