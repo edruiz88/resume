@@ -1,22 +1,21 @@
-// const io = require('socket.io-client')
+const io = require('socket.io-client')
 // const bitSocket =  require('isomorphic-ws');
 
-// export const socket = io('127.0.0.1:3000/bot', {
-//     forceNew:true,
-//     reconnection: true,
-//     reconnectionDelay: 1000,
-//     reconnectionDelayMax: 5000,
-//     reconnectionAttempts: Infinity
-// });
-export const socket = false
+export const socket = io('http://localhost:3000', {
+    forceNew:true,
+    reconnection: true,
+    reconnectionDelay: 1000,
+    reconnectionDelayMax: 5000,
+    reconnectionAttempts: Infinity
+});
 
-// socket.on('is_connected', (data) => {
-//     console.log(data)
-// })
+socket.on('is_connected', (data) => {
+    console.log(data)
+})
 
-// socket.on('bot_reply', (data) => {
-//     console.log(data)
-//   })
+socket.on('bot_reply', (data) => {
+    console.log(data)
+  })
 
 // export const bitSock = new bitSocket('wss://127.0.0.1:3000');
 

@@ -123,8 +123,8 @@ const About=()=>{
                 <div key={i} className={`chatbot-msg ${d.pos}-msg`}>
                 {/* <div className="msg-img" style={{backgroundImage: "url(https://image.flaticon.com/icons/svg/327/327779.svg)"}}></div> */}
                 <div className="msg-bubble">
-                  <div className="msg-text">
-                    {d.txt}
+                  <div className="msg-text" >
+                    {d.pos=='left'?<div dangerouslySetInnerHTML={{__html:d.txt}}/>:d.txt}
                   </div>
                 </div>
               </div> )}
