@@ -1,7 +1,7 @@
 const io = require('socket.io-client')
 // const bitSocket =  require('isomorphic-ws');
 
-export const socket = io('http://localhost:3000', {
+export const socket = io('https://eruiz.herokuapp.com', {
     forceNew:true,
     reconnection: true,
     reconnectionDelay: 1000,
