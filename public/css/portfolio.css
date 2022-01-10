@@ -1307,3 +1307,23 @@ font-size: 15px;
     width: 34px;
     height: 34px;
 }
+
+.article{
+    text-align: center;
+    width: 75%;
+    font-size: 17px;
+    font-weight: bold;
+}
+.hire-txt{
+    font-size:20px;
+    color: #763cb0;
+    font-weight: bold;
+    margin-left: 20%;
+}
+.chatbot-cards.hire{
+    display:flex;
+    align-items: center;
+}
+.chatbot-cards.hire:hover{
+    cursor: pointer;
+}

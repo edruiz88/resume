@@ -48,7 +48,7 @@ fastify.post('/sendmail', (req, reply, next) => {
   console.log(req.body)
 
   var textBody = `FROM: ${req.body.name} EMAIL: ${req.body.email} MESSAGE: ${req.body.msg}`;
-	var htmlBody = `<h2>Mail From Contact Form</h2><p>from: ${req.body.name} <a href="mailto:${req.body.email}">${req.body.email}</a></p><p>${req.body.msg}</p>`;
+	var htmlBody = `<h2>${req.body.subject}</h2><p>from: ${req.body.name} <a href="mailto:${req.body.email}">${req.body.email}</a></p><p>${req.body.msg}</p>`;
 
     nodemailer.sendMail({
       from: recipient,

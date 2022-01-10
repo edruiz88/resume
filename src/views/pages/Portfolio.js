@@ -18,10 +18,10 @@ const Portfolio = () =>{
     const icons = [<Icon.Briefcase/>, <Icon.Puzzle/>, <Icon.CalendarTime/>, <Icon.Writing/>, <Icon.ChartLine/>, <Icon.Message/>, <Icon.Robot/>]
 
     const items = [{title:'Captcha Puzzle', term:'creative, UX, Security', img:'captcha'},
-        {title:'TimePicker Range', term:'creative, design', img:'timepicker'},
+        {title:'TimePicker Range', term:'creative, UX, design', img:'timepicker'},
         {title:'Text Editor', term:'creative, UX, Security', img:'texteditor'},
-        {title:'Line Chart', term:'creative, design', img:'linechart'},
-        {title:'Feedback', term:'branding, art', img:'feedback'},
+        {title:'Line Chart', term:'creative, UX, design', img:'linechart'},
+        {title:'Feedback', term:'creative, UX, design', img:'feedback'},
         {title:'ChatBot', term:'design, UX, AI', img:'chatbot'}]
 
     const closeMenu=(e)=>{
@@ -68,8 +68,8 @@ const Portfolio = () =>{
                             <span className="term">{d.term}</span>
                         </div>
                         {icons[i+1]}
+                    <div className="view" onClick={()=>setpage(i+1)}>View</div>
                     <div className="thumb">
-                        {/* <img src="https://bako-portfolio.vercel.app/images/portfolio/1.jpg" alt="Creative Art"/> */}
                         <img src={`img/portfolio-${d.img}.png`} alt="Creative Art"/>
                         <div className="mask"></div>
                     </div>

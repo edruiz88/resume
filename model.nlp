@@ -1256,12 +1256,12 @@
         ],
         "bot.info": [
           {
-            "answer": "I am a bot created with python by <b>Eduardo Ruiz</b>, a Full Stack Developer."
+            "answer": "I am a bot created by <b>Eduardo Ruiz</b>, a Full Stack Developer."
           }
         ],
         "bot.creator": [
           {
-            "answer": "Fui creado <b>Eduardo Ruiz | Full Stack Developer</b>"
+            "answer": "I was created by <b>Eduardo Ruiz | Full Stack Developer</b>"
           }
         ],
         "bot.age": [

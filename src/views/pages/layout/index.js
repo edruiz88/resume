@@ -59,6 +59,7 @@ function MainLayout({children, ...rest}){
         {open&&<div ref={navLinks} className="navLinks">
           {sideMenu()}
         </div>}
+        {/* <img className={'nav-img'} src={'img/eduardo.png'}/> */}
         <div id="nav-icon3" onClick={()=>handleOpen()} className={`nav-icon ${open?'open':''}`}><span></span><span></span><span></span><span></span></div>
         </nav>:''}
           <div className={`page-section${loc=='/home'?' home':''}`}>
