@@ -59,9 +59,9 @@ const percent=(pos, neg)=>{
           <div id="grid">
             <div className={'f-card'} id="A">
               <div className={'ucontent'}>
-                <img src={'img/user-1.png'}/>
+                <img src={'img/eduardo.png'}/>
                 <div className={'namecntnt'}>
-                  <div className={'uname'}>Mareea Smith</div>
+                  <div className={'uname'}>Eduardo Ruiz</div>
                   <div className={'udesc'}>Web Developer</div>
                 </div>
                 <div className={'profile-btn'} onClick={()=>setFeed(true)}><Icon.Message/></div>
