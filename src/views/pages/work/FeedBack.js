@@ -14,7 +14,7 @@ const FeedBack =()=>{
               {emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'},{emo:4,time:'none', comm:'h'}])
 
   const feedRef = useRef('');
-  const trader = 'Mareea';
+  const trader = 'Eduardo';
 
   const pos = rev.filter((e)=>e.emo==4||e.emo==3).length
   const neg = rev.filter((e)=>e.emo==0||e.emo==1).length
