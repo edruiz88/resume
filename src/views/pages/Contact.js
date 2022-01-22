@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import * as Icon from '../../components/icons'
+import validate from '../../components/ValidForm'
 
 function Contact(){
-   const [name, setName] = useState('')
-   const [email, setEmail] = useState('')
-   const [subject, setSubject] = useState('')
-   const [msg, setMsg] = useState('')
+   const [values, setValues] = useState({name:'',email:'',subject:'',message:''})
+   const [errors, setErrors] = useState({})
+   const [touched, setTouched] = useState({})
    const [loading, setLoading] = useState(false)
    const [success, setSuccess] = useState(false)
 
@@ -15,8 +15,74 @@ function Contact(){
                {icon:<Icon.Maps2/>,name:'Location',value:'Falcon, Venezuela'},
                {icon:<Icon.Paypal/>,name:'Support me ❤',value:'eduardoruizm88@gmail.com'}]
 
-   const sendEmail= async ()=>{
-      const formData = {name:name,email:email,subject:subject,msg:msg}
+const checkErrors = (name, value) => {
+   const { [name]: removedError, ...rest } = errors;
+   // check for a new error
+   const error = validate[name](value, name);
+   // validate the field if the value has been touched
+   setErrors({
+     ...rest,
+     ...(error && { [name]: touched[name] && error }),
+   });
+}
+
+const handleFocus= evt =>{
+   const { name } = evt.target;
+   setTouched({
+      ...touched,
+      [name]: true,
+    });
+}
+
+// change event handler
+const handleChange = evt => {
+   const { name, value } = evt.target;
+   // save field values
+   setValues({
+     ...values,
+     [name]: value,
+   });
+   checkErrors(name, value)
+ }
+ 
+ const handleBlur = evt => {
+   const { name, value } = evt.target;
+   checkErrors(name, value)
+ }
+
+ // form submit handler
+ const sendEmail = async () => {
+   // validate the form
+   const formValidation = Object.keys(values).reduce(
+     (acc, key) => {
+       const newError = validate[key](values[key], key);
+       const newTouched = { [key]: true };
+       return {
+         errors: {
+           ...acc.errors,
+           ...(newError && { [key]: newError }),
+         },
+         touched: {
+           ...acc.touched,
+           ...newTouched,
+         },
+       };
+     },
+     {
+       errors: { ...errors },
+       touched: { ...touched },
+     },
+   )
+   setErrors(formValidation.errors);
+   setTouched(formValidation.touched);
+ 
+   if (
+     !Object.values(formValidation.errors).length && // errors object is empty
+     Object.values(formValidation.touched).length ===
+       Object.values(values).length && // all fields were touched
+     Object.values(formValidation.touched).every(t => t === true) // every touched field is true
+   ) {
+      const formData = {name:values.name,email:values.email,subject:values.subject,msg:values.message}
       setLoading(true)
       await axios({
          method:'POST',
@@ -27,8 +93,9 @@ function Contact(){
      .then((res)=>{
          setSuccess(true)
          setLoading(false)
-      }).catch((err)=>{console.log(err)});
+      }).catch((err)=>{console.log(err)})
    }
+ }
 
   return (
       <div className="section-content d-flex top">
@@ -52,31 +119,34 @@ function Contact(){
 
               <div className="inline-inputs">
                 <div className="form-group">
-                  <input type="text" name="your-name" onChange={e=>setName(e.target.value)}className="form-control" placeholder="Your name"/>
+                  <input type="text" name="name" className={`form-control${errors.name ? ' invalid' : ''}`} onFocus={handleFocus} onChange={handleChange} onBlur={handleBlur} placeholder="Your name"/>
+                  <span className="form-error">{touched.name && errors.name}</span>
                 </div>
                 <div className="form-group">
-                  <input type="email" name="your-email" onChange={e=>setEmail(e.target.value)} className="form-control" placeholder="Email address"/>
+                  <input type="email" name="email" className={`form-control${errors.email ? ' invalid' : ''}`} onFocus={handleFocus} onChange={handleChange} onBlur={handleBlur} autoComplete="email" placeholder="Email address"/>
+                  <span className="form-error">{touched.email && errors.email}</span>
                 </div>
               </div>
 
               <div className="form-group">
-                <input type="text" name="your-name" className="form-control" onChange={e=>setSubject(e.target.value)} placeholder="Subject"/>
+                <input type="text" name="subject" className={`form-control${errors.subject ? ' invalid' : ''}`} onFocus={handleFocus} onChange={handleChange} onBlur={handleBlur} placeholder="Subject"/>
+                <span className="form-error">{touched.subject && errors.subject}</span>
               </div>
               
               <div className="form-group">
-                <textarea name="your-message" cols="40" rows="4" onChange={e=>setMsg(e.target.value)} className="form-control" placeholder="Message..." style={{marginTop:"0px", marginBottom:"0px",height:"113px"}}></textarea>
+                <textarea name="message" cols="40" rows="4" className={`form-control${errors.message ? ' invalid' : ''}`} onFocus={handleFocus} onChange={handleChange} onBlur={handleBlur} placeholder="Message..." style={{marginTop:"0px", marginBottom:"0px",height:"113px"}}></textarea>
+                <span className="form-error">{touched.message && errors.message}</span>
               </div>
-              <button type="submit"  onClick={()=>sendEmail()} className={`btn btn-about hire${loading?' btn-progress':''}`}>Submit Message</button>  
+              <button onClick={()=>sendEmail()} className={`btn btn-about hire${loading?' btn-progress':''}`}>Submit Message</button>  
           </div>
           :
             <div className='expandd' style={{textAlign:'center',position:'relative',width:'100%',height:'100%',top:'0px',left:'0px'}}>
                <div className="check-circle">
-                  <div className="circle d-flex" /*dangerouslySetInnerHTML={{__html:'&#x2714'}}*/>✔</div>
+                  <div className="circle d-flex" >✔</div>
                </div>
                <h1>Thank you!</h1>
                <div>I appreciate that you've taken the time to write me.</div>
                <div>I'll get back to you very soon.</div>
-               {/* <div className="btn btn-success" onClick={()=>reset()}>Try Again</div> */}
             </div>}
         </div>
           

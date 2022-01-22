@@ -41,6 +41,10 @@ function MainLayout({children, ...rest}){
   const sideMenu=()=>{
     return(
       <ul className="side-menu">
+        <li className={'nav-img-mob'}>
+          <img className={'nav-img'} src={'img/eduardo.png'}/>
+          <span className={'nav-name'}>Eduardo Ruiz</span>
+        </li>
         {sideArr.map((e, i)=>
           <li key={i} onClick={()=>sideClick()} className={`list-menu${loc==e.link?' active':''}`}>
             <NavLink className="nav-link" to={e.link}>{e.icon}<span>{e.name}</span></NavLink>
@@ -51,16 +55,15 @@ function MainLayout({children, ...rest}){
   }
   return (
     <div className="page-wrapper">
-    {size.width>767.98&&<SideNav sidemenu={sideMenu()} icon={Icon} /*hideSide={hideSide} *//>}
+    {size.width>=767.98&&<SideNav sidemenu={sideMenu()} icon={Icon} /*hideSide={hideSide} *//>}
         <div className="site-content" /*style={{paddingLeft:mini, height:`100%`}} */>
-
+        {size.width<767.98&&<div id="nav-icon3" onClick={()=>handleOpen()} className={`nav-icon ${open?'open':''}`}><span></span><span></span><span></span><span></span></div>}
         {size.width<767.98?<nav className={`nav-mobile${open?' active':''}`}
-        style={{backgroundColor: open?'rgba(39,45,61,.9)':'transparent', height:open?'100vh':'70px'}}>
+        style={{backgroundColor: open?'rgba(39,45,61,.9)':'transparent'}}>
         {open&&<div ref={navLinks} className="navLinks">
           {sideMenu()}
         </div>}
         {/* <img className={'nav-img'} src={'img/eduardo.png'}/> */}
-        <div id="nav-icon3" onClick={()=>handleOpen()} className={`nav-icon ${open?'open':''}`}><span></span><span></span><span></span><span></span></div>
         </nav>:''}
           <div className={`page-section${loc=='/home'?' home':''}`}>
             {loc!='/home'&&<h3 className="section-title">{title}</h3>}

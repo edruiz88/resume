@@ -202,6 +202,13 @@ a:hover{
     color: #9ea9b3;
     opacity:1
 }
+.form-control.invalid {
+    border: solid 1px #f46a6a
+}
+.form-error {
+    position: absolute;
+    color: #f46a6a
+}
 .form-group {
     margin-bottom: 25px;
     position: relative
@@ -744,12 +751,12 @@ margin-top: 30px;
 }
 .portfolio-item .view {
     color: #fff;
-    border: solid 2px #fff;
+    border: solid 1.8px #fff;
     font-size: 12px;
-    border-radius: 8px;
+    border-radius: 5.8px;
     right: 20px;
     bottom: 20px;
-    padding: 4px 5px;
+    padding: 3.5px 4.5px;
     z-index: 1;
 }
 .view:hover{
@@ -812,23 +819,51 @@ margin-top: 30px;
     position: fixed;
     left: 0;
     z-index: 1;
-    /* height: calc(var(--vh, 1vh)*100); */
     width: 100vw;
-    /* padding: 0 30px; */
+    height: 100vh;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    transition: all 0.3s;
+    top: -100vh;
+    -webkit-transform: none;
+            transform: none;
+    transition: all 200ms linear;
+    will-change: transform;
 }
 .nav-mobile.active {
-    -webkit-backdrop-filter: blur(10px);/* 24px */
-    backdrop-filter: blur(10px);/* 24px */
-    z-index: 999;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+    transition: all 200ms linear;
+    will-change: transform;
 }
 .navLinks{
     opacity: 0;
-    margin-top: calc(50% + 80px);
+    margin-top: calc(50vh - 100px);
     /* transition: all .3s ease-out; */
+}
+.nav-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #a09e9e;
+}
+.nav-img-mob {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 280px);
+}
+.nav-name {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #a09e9e
 }
 /* hamburger menu landing */
 #nav-icon3 {
@@ -837,6 +872,7 @@ margin-top: 30px;
     position: absolute;
     top: 30px;
     right: 5px;
+    z-index:100;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -969,7 +1005,8 @@ margin-top: 30px;
         width: 60% !important;
     }
     .inline-inputs{
-        grid-template-columns: auto !important
+        grid-template-columns: auto !important;
+        grid-gap: 0 !important
     }
     .contact-info-wrapper, .contact-form-wrapper{
         width: 100% !important;
