@@ -41,10 +41,10 @@ function MainLayout({children, ...rest}){
   const sideMenu=()=>{
     return(
       <ul className="side-menu">
-        <li className={'nav-img-mob'}>
+        {size.width<767.98&&<li className={'nav-img-mob'}>
           <img className={'nav-img'} src={'img/eduardo.png'}/>
           <span className={'nav-name'}>Eduardo Ruiz</span>
-        </li>
+        </li>}
         {sideArr.map((e, i)=>
           <li key={i} onClick={()=>sideClick()} className={`list-menu${loc==e.link?' active':''}`}>
             <NavLink className="nav-link" to={e.link}>{e.icon}<span>{e.name}</span></NavLink>
@@ -63,7 +63,6 @@ function MainLayout({children, ...rest}){
         {open&&<div ref={navLinks} className="navLinks">
           {sideMenu()}
         </div>}
-        {/* <img className={'nav-img'} src={'img/eduardo.png'}/> */}
         </nav>:''}
           <div className={`page-section${loc=='/home'?' home':''}`}>
             {loc!='/home'&&<h3 className="section-title">{title}</h3>}

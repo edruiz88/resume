@@ -458,6 +458,7 @@ a:hover{
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    max-width: 1700px;
     height: 85%;
     background-color: #763cb0;
     box-shadow: 0 0 100px -5px rgb(0 0 0 / 25%);
