@@ -28,7 +28,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
           <div className="timeline-item">
               <div className="left-part">
-                <h5 className="item-period">2022 - Actual</h5>
+                <h5 className="item-period">2022 - Current</h5>
                 <span className="item-company">UNEFA</span>
               </div>
               <div className="divider"></div>
@@ -60,7 +60,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
                 </div>
                 <div className="divider"></div>
                 <div className="right-part">
-                  <h5 className="item-title">Full-Stack Developer</h5>
+                  <h5 className="item-title">Full Stack Developer</h5>
                   <p>A blockchain based website to exchange cryptocurrencies in real time through P2P transactions.</p>
                   <div>• Code creation and optimization</div>
                   <div>• Creation of custom components</div>
@@ -75,7 +75,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
                 </div>
                 <div className="divider"></div>
                 <div className="right-part">
-                  <h5 className="item-title">Full-Stack Developer</h5>
+                  <h5 className="item-title">Full Stack Developer</h5>
                   <p>Creation of a GPT-type app which offers a paid survey service.</p>
                 </div>
             </div>
