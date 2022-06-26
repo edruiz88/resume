@@ -28,13 +28,13 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
           <div className="timeline-item">
               <div className="left-part">
-                <h5 className="item-period">2013 - 2016</h5>
-                <span className="item-company">Simon Bolivar University</span>
+                <h5 className="item-period">2022 - current</h5>
+                <span className="item-company">UNEFA</span>
               </div>
               <div className="divider"></div>
               <div className="right-part">
-                <h5 className="item-title">Computer Science</h5>
-                <p>Bachelor's degree in computer science obtained through distance studies.</p>
+                <h5 className="item-title">Computer Systems Engineering</h5>
+                <p>Bachelor's degree in Computer Systems Engineering in process.</p>
               </div>
           </div>
           <div className="timeline-item">
@@ -56,7 +56,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
           <div className="timeline-item">
                 <div className="left-part">
                   <h5 className="item-period">2016 - Current</h5>
-                  <span className="item-company">BusyBit (own)</span>
+                  <span className="item-company">Bitmify.com</span>
                 </div>
                 <div className="divider"></div>
                 <div className="right-part">

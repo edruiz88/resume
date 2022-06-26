@@ -15,7 +15,7 @@ const About=()=>{
     // const [anim, setAnim] = useState(false)
     const [member, setMember] = useState([])
     const history = useHistory()
-    const [placeBtns, setPlaceBtns] = useState(['I’m a BusyBit customer with a question.','I’d like to learn more about BusyBit','Just browsing!'])
+    const [placeBtns, setPlaceBtns] = useState(['I’m a Bitmify customer with a question.','I’d like to learn more about Bitmify','Just browsing!'])
     const msg = useRef()
     const empty = msgs=='*'
 
@@ -160,7 +160,7 @@ const About=()=>{
               </div> )}
               {placeBtns[0]&&<div className={'place-cntnr'} style={{top:`${80-((placeBtns.length+1)*8)}%`}}>
                   <div className={'chat-placeholder muted mb-2'} style={{opacity:empty?1:0}}>
-                    👋  Hi there! Welcome to BusyBit - the future of P2P transactions. Want to find out more about BusyBit?
+                    👋  Hi there! Welcome to Bitmify - the future of P2P transactions. Want to find out more about Bitmify?
                   </div>
                   <div className={'btns-placeholder'}>
                     {placeBtns.map((d,i)=>

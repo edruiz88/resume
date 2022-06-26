@@ -8,7 +8,7 @@ const Description =props=>{
         </div>
         <ul className="work-info">
             <li><p><i className="fa fa-user"></i> Eduardo Ruiz</p></li>
-            <li><p><i className="fa fa-globe"></i> <a href="#" target="_blank">own project</a></p></li>
+            <li><p><i className="fa fa-globe"></i> <a href="#" target="_blank">https://bitmify.com</a></p></li>
             <li><p><i className="fa fa-calendar"></i> 25 october, 2016</p></li>
         </ul>
 

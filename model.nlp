@@ -85,7 +85,7 @@
             "intent": "landing.just",
             "domain": "default"
           },
-          "about,busybit,had,i,learn,like,more,to": {
+          "about,Bitmify,had,i,learn,like,more,to": {
             "intent": "landing.learn",
             "domain": "default"
           },
@@ -210,7 +210,7 @@
           },
           {
             "domain": "default",
-            "utterance": "I'd like to learn more about BusyBit",
+            "utterance": "I'd like to learn more about Bitmify",
             "intent": "landing.learn"
           },
           {
@@ -308,7 +308,7 @@
               "learn": 1,
               "more": 1,
               "about": 1,
-              "busybit": 1,
+              "Bitmify": 1,
               "am": 1,
               "a": 1,
               "busibit": 1,
@@ -390,7 +390,7 @@
                 "learn": 1,
                 "more": 1,
                 "about": 1,
-                "busybit": 1
+                "Bitmify": 1
               },
               "landing.quest": {
                 "i": 1,
@@ -514,7 +514,7 @@
               "about": [
                 "landing.learn"
               ],
-              "busybit": [
+              "Bitmify": [
                 "landing.learn"
               ],
               "am": [
@@ -603,7 +603,7 @@
                 "learn",
                 "more",
                 "about",
-                "busybit",
+                "Bitmify",
                 "am",
                 "a",
                 "busibit",
@@ -1174,7 +1174,7 @@
       ],
       [
         "en",
-        "I'd like to learn more about BusyBit"
+        "I'd like to learn more about Bitmify"
       ],
       [
         "en",
@@ -1281,7 +1281,7 @@
         ],
         "landing.learn": [
           {
-            "answer": "<b>BusyBit</b> is a website for the exchange of cryptocurrencies, through P2P transactions in real time, we make the process so easy that even a child can understand."
+            "answer": "<b>Bitmify</b> is a website for the exchange of cryptocurrencies, through P2P transactions in real time, we make the process so easy that even a child can understand."
           }
         ],
         "landing.quest": [
