@@ -28,7 +28,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
           <div className="timeline-item">
               <div className="left-part">
-                <h5 className="item-period">2022 - current</h5>
+                <h5 className="item-period">2022 - Actual</h5>
                 <span className="item-company">UNEFA</span>
               </div>
               <div className="divider"></div>
@@ -40,7 +40,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
           <div className="timeline-item">
               <div className="left-part">
                 <h5 className="item-period">2009 - 2013</h5>
-                <span className="item-company">U.P.T.A.G</span>
+                <span className="item-company">UPTAG</span>
               </div>
               <div className="divider"></div>
               <div className="right-part">
@@ -56,7 +56,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
           <div className="timeline-item">
                 <div className="left-part">
                   <h5 className="item-period">2016 - Current</h5>
-                  <span className="item-company">Bitmify.com</span>
+                  <span className="item-company">Bitmify</span>
                 </div>
                 <div className="divider"></div>
                 <div className="right-part">

@@ -85,7 +85,7 @@
             "intent": "landing.just",
             "domain": "default"
           },
-          "about,Bitmify,had,i,learn,like,more,to": {
+          "about,bitmifi,had,i,learn,like,more,to": {
             "intent": "landing.learn",
             "domain": "default"
           },
@@ -308,7 +308,7 @@
               "learn": 1,
               "more": 1,
               "about": 1,
-              "Bitmify": 1,
+              "bitmifi": 1,
               "am": 1,
               "a": 1,
               "busibit": 1,
@@ -390,7 +390,7 @@
                 "learn": 1,
                 "more": 1,
                 "about": 1,
-                "Bitmify": 1
+                "bitmifi": 1
               },
               "landing.quest": {
                 "i": 1,
@@ -514,7 +514,7 @@
               "about": [
                 "landing.learn"
               ],
-              "Bitmify": [
+              "bitmifi": [
                 "landing.learn"
               ],
               "am": [
@@ -603,7 +603,7 @@
                 "learn",
                 "more",
                 "about",
-                "Bitmify",
+                "bitmifi",
                 "am",
                 "a",
                 "busibit",
