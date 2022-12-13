@@ -459,7 +459,7 @@ a:hover{
     justify-content: space-between;
     width: 90%;
     max-width: 1700px;
-    height: 85%;
+    height: 90%;
     background-color: #763cb0;
     box-shadow: 0 0 100px -5px rgb(0 0 0 / 25%);
     border-radius: 32px;
@@ -492,7 +492,7 @@ a:hover{
 .user-pic{
     position: relative;
     width: 140px;
-    margin: 60px auto 30px;
+    margin: 30px auto 10px;
     z-index: 1;
 }
 .user-pic img{
@@ -544,7 +544,7 @@ a:hover{
     margin-right: 5px;
 }
 .user-title{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .user-title h2 {
     font-size: 27px;
@@ -598,15 +598,15 @@ a:hover{
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 30px;
+margin-top: 15px;
 
 }
 .social-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
     margin: 0 5px 0 5PX;
     cursor: pointer;
     border-radius: 50%;
@@ -615,7 +615,8 @@ margin-top: 30px;
     transition: all .15s ease-in
 }
 .social-icon svg{
-    color:#5f328b
+    color:#5f328b;
+    width: 20px;
 }
 
 @keyframes scaling {
@@ -648,11 +649,11 @@ margin-top: 30px;
     display:flex;
     height: 100%;
     flex-direction: column;
-    padding: 0 0 20px 0;
 }
 .page-section.home{
     align-items: center;
     justify-content: center;
+    flex-direction: unset;
     height: 100%;
 }
 .check-circle {
@@ -1245,14 +1246,19 @@ margin-top: 30px;
 	background-color: rgba(118, 60, 176, 0.6);
 	border-radius: 3px
 }
-
+.sidebar .rcs-custom-scroll .rcs-inner-handle {
+	background-color: rgba(67, 231, 148, 0.6);
+}
 /* #chat-scroll .rcs-inner-container{
     height: 450px;
 } */
 
 .scroll-zone{
     position: relative;
-    height: calc(100vh - 31vh);
+    height: calc(100% - 50px);
+}
+.scroll-zone.pf{
+    height: calc(100% - 75px);
 }
 /* About section*/
 .about-pic{

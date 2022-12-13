@@ -68,7 +68,7 @@ function MainLayout({children, ...rest}){
             {loc!='/home'&&<h3 className="section-title">{title}</h3>}
 
             <Scroll>
-              <div className={`scroll-zone`}>
+              <div className={`scroll-zone${loc=='/portfolio'?' pf':''}`}>
                 {children}
               </div>
             </Scroll>

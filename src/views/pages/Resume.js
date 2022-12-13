@@ -24,7 +24,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
         <div className="timeline">
 
-        <div className={'space-title'}><Icon.School style={{marginBottom:'-5px'}}/>Education</div>
+        <div className="space-title"><Icon.School style={{marginBottom:'-5px'}}/>Education</div>
 
           <div className="timeline-item">
               <div className="left-part">
@@ -51,7 +51,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
           <div className="timelin" style={{marginTop:'60px'}}>
 
-          <div className={'space-title'}><Icon.Briefcase style={{marginBottom:'-5px'}}/>Experience</div>
+          <div className="space-title"><Icon.Briefcase style={{marginBottom:'-5px'}}/>Experience</div>
 
           <div className="timeline-item">
                 <div className="left-part">
@@ -91,7 +91,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
                 </div>
             </div> */}
             <ul className="knowledges" style={{marginTop:'60px'}}>
-            <div className={'space-title'}><Icon.Bulb style={{marginBottom:'-5px'}}/>Courses and Knowledges</div>
+            <div className="space-title"><Icon.Bulb style={{marginBottom:'-5px'}}/>Courses and Knowledges</div>
                 <li>Web Development</li>
                 <li>Android Development</li>
                 <li>Cloud Computing</li>
@@ -107,7 +107,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
         <div className="skills">
           <div className="skills-content">
-          <div className={'space-title'}><Icon.Code style={{marginBottom:'-5px'}}/>Coding Skills</div>
+          <div className="space-title"><Icon.Code style={{marginBottom:'-5px'}}/>Coding Skills</div>
             {skills.map((e,i)=>
               <div key={i} className="mb-4">
                 <div className="percent">{e.perc}%</div>
@@ -121,7 +121,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
           </div>
 
           <div className="db-skills" style={{marginTop:'60px'}}>
-            <div className={'space-title'}><Icon.DB style={{marginBottom:'-5px'}}/>Database Skills</div>
+            <div className="space-title"><Icon.DB style={{marginBottom:'-5px'}}/>Database Skills</div>
             {DBskills.map((e,i)=>
               <div key={i} className="mb-4">
                 <div className="percent">{e.perc}%</div>
@@ -135,7 +135,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
           </div>
 
           <div className="db-skills" style={{marginTop:'60px'}}>
-            <div className={'space-title'}><Icon.GitFork style={{marginBottom:'-5px'}}/>Framework Skills</div>
+            <div className="space-title"><Icon.GitFork style={{marginBottom:'-5px'}}/>Framework Skills</div>
             {FWSkills.map((e,i)=>
               <div key={i} className="mb-4">
                 <div className="percent">{e.perc}%</div>
