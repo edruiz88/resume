@@ -1,0 +1,41 @@
+{
+  "name": "resumefast",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "predeploy": "npm run start",
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "axios": "^0.21.4",
+    "babel-loader": "^8.2.2",
+    "fastify": "^3.21.6",
+    "fastify-cors": "^6.0.2",
+    "fastify-nodemailer": "^5.0.0",
+    "fastify-static": "^4.2.3",
+    "http": "0.0.1-security",
+    "isomorphic-ws": "^4.0.1",
+    "node-nlp": "^4.22.8",
+    "path": "^0.12.7",
+    "point-of-view": "^4.15.2",
+    "pug": "^3.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "socket.io": "^4.2.0",
+    "socket.io-client": "^4.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
