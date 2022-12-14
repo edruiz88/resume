@@ -1,7 +1,7 @@
 const io = require('socket.io-client')
 // const bitSocket =  require('isomorphic-ws');
 
-export const socket = io('eruiz.netlify.app/', {
+export const socket = io('https://eruiz.netlify.app/', {
     forceNew:true,
     reconnection: true,
     reconnectionDelay: 1000,
