@@ -6,7 +6,7 @@ import TimePicker from './work/TimePicker';
 import TextEditor from './work/TextEditor';
 import LineChart from './work/LineChart';
 import FeedBack from './work/FeedBack';
-import ChatBot from './work/ChatBot';
+// import ChatBot from './work/ChatBot';
 
 
 const Portfolio = () =>{
@@ -85,7 +85,7 @@ const Portfolio = () =>{
              filter==3?<TextEditor/>:
              filter==4?<LineChart/>:
              filter==5?<FeedBack/>:
-             filter==6?<ChatBot/>:''}
+             filter==6?<FeedBack/>:''}
         </div>}
 
     </>
