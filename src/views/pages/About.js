@@ -35,7 +35,7 @@ function About(){
                 </div>
               </div>
               <div className="about-btns">
-                <button className="btn btn-about download" onClick={()=>window.open('https://eruiz.herokuapp.com/docs/eduardoCV.pdf', '_blank')}>Download CV</button>
+                <button className="btn btn-about download" onClick={()=>window.open('https://eruiz.netlify.app/docs/eduardoCV.pdf', '_blank')}>Download CV</button>
                 <button className="btn btn-about hire" onClick={()=>hire()}>Hire Me</button>
               </div>
           </div>

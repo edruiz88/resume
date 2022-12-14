@@ -86,7 +86,7 @@ const handleChange = evt => {
       setLoading(true)
       await axios({
          method:'POST',
-         url:'https://eruiz.herokuapp.com/sendmail',
+         url:'https://eruiz.netlify.app/sendmail',
          data:formData,
          headers: {'Content-Type': 'application/json'}
      })

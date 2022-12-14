@@ -10,7 +10,7 @@ fastify.register(require('fastify-static'), {
 })
 
 fastify.register(require('fastify-cors'), {
-  origin: 'eruiz.herokuapp.com',
+  origin: 'eruiz.netlify.app',
   methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
   credentials: true
 });
