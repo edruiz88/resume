@@ -1,6 +1,5 @@
 import React from 'react';
 import * as Icon from '../../components/icons'
-import Scroll from '../../components/CustomScroll'
 
 function Resume(){
   const skills =[{skill:'JS, ReactJS', perc:'95', col:['#9a56ff','#e36cd9 ']},
@@ -8,16 +7,19 @@ function Resume(){
                 {skill:'HTML, CSS', perc:'85', col:['#03a9f4','#51bcec ']},
                 {skill:'Python', perc:'75', col:['#f48665','#fda23f']},
                 {skill:'PHP', perc:'55', col:['#f6e384','#ffd500']},
-                {skill:'VueJS', perc:'40', col:['#29c0b1','#4ed6c8']}]
+                /*{skill:'VueJS', perc:'40', col:['#29c0b1','#4ed6c8']}*/]
 
   const DBskills =[{skill:'MongoDB', perc:'95', col:['#9a56ff','#e36cd9']},
                   {skill:'MySQL', perc:'80', col:['#23bdb8','#43e794']},
-                  {skill:'MariaDB', perc:'60', col:['#f48665','#fda23f']},]
+                  /*{skill:'MariaDB', perc:'60', col:['#f48665','#fda23f']},*/]
 
 const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 ']},
                 {skill:'Flask', perc:'80', col:['#23bdb8','#43e794']},
                 {skill:'AdonisJS', perc:'75', col:['#f48665','#fda23f']},
                 {skill:'Laravel', perc:'50', col:['#03a9f4','#51bcec']}]
+
+const courses = ['Web Development','Mobile Development','Cloud Computing','E-Commerce','Digital Marketing',
+                'Time Management','Problem-Solving','PhotoShop','AI','SCRUM Fundamentals']
   return (
 
       <div className='section-content d-flex top'>
@@ -28,7 +30,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
 
           <div className="timeline-item">
               <div className="left-part">
-                <h5 className="item-period">2022 - Current</h5>
+                <h5 className="item-period">2023 - Current</h5>
                 <span className="item-company">UNEFA</span>
               </div>
               <div className="divider"></div>
@@ -92,14 +94,7 @@ const FWSkills =[{skill:'Express, Fastify', perc:'95', col:['#9a56ff','#e36cd9 '
             </div> */}
             <ul className="knowledges" style={{marginTop:'60px'}}>
             <div className="space-title"><Icon.Bulb style={{marginBottom:'-5px'}}/>Courses and Knowledges</div>
-                <li>Web Development</li>
-                <li>Android Development</li>
-                <li>Cloud Computing</li>
-                <li>E-Commerce</li>
-                <li>Digital Marketing</li>
-                <li>Time Management</li>
-                <li>Problem-Solving</li>
-                <li>PhotoShop</li>
+            {courses.map((e,i)=><li key={i}>{e}</li>)}
             </ul>
           </div>
 

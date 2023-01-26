@@ -6,7 +6,8 @@ module.exports = {
   entry:  './src/app.js',
   output: {
     path: path.resolve(__dirname, 'public/js/'),
-    filename: 'app.js'
+    filename: 'app.js',
+    hashFunction: 'xxhash64'
   },
   module: {
     rules: [

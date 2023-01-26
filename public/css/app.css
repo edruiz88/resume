@@ -476,6 +476,7 @@ a:hover{
 }
 
 .site-content{
+    overflow: hidden;
     position: relative;
     height: 100%;
     width: 75%;
@@ -646,14 +647,9 @@ margin-top: 15px;
     animation: scaling .2s; */
 }
 .page-section{
-    display:flex;
-    height: 100%;
-    flex-direction: column;
+    height: calc(100% - 74px);
 }
 .page-section.home{
-    align-items: center;
-    justify-content: center;
-    flex-direction: unset;
     height: 100%;
 }
 .check-circle {
@@ -945,9 +941,7 @@ margin-top: 15px;
         display:none
     }
     .site-content {
-        /* position:absolute; */
         width: 100%;
-        overflow: auto;
         border-radius: unset;
     }
     .page-wrapper{

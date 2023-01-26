@@ -51,8 +51,8 @@ const loadImg = useCallback(() => {
   const tangram = canvas1.current;
   const puzzlePiece = piece.current;
 
-  var ctx = tangram.getContext('2d');
-  var ctx2 = puzzlePiece.getContext('2d');
+  var ctx = tangram.getContext('2d',{ willReadFrequently: true });
+  var ctx2 = puzzlePiece.getContext('2d',{ willReadFrequently: true });
 
   var txt = title[Math.floor(Math.random()*title.length)];
   var fnt = font[Math.floor(Math.random()*font.length)];
@@ -71,11 +71,11 @@ const loadImg = useCallback(() => {
 const icons = (icon)=>{
   return <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={'24'}
-          height={'24'}
+          width='24'
+          height='24'
           viewBox="0 0 24 24"
           fill="none"
-          stroke={'#fff'}
+          stroke='#fff'
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -246,10 +246,10 @@ const drawPuzzle = useCallback((ctx, ctx2, cx, cy) => {
           <div className="captcha_slider_button" ref={dragHeadRef} style={{transform: `translate(${Math.min(Math.max(position, 0), 228)}px, 0px)`, transition:isDragging.current?'none':'all 0.5s'}}>{isDragging.current?icons(1):icons(2)}</div>
         </div>
         <div className="captcha_footer">
-          <small className="captcha_brand text-muted">Powered by <b>BitNow</b></small>
+          <small className="captcha_brand text-muted">Powered by <b>Bitmify</b></small>
           <div className="captcha_icons">
-            <span className={''} onClick={()=>setShow(false)}><Icon.CircleX/></span>
-            <span className={''} onClick={()=>syncCaptcha()}><Icon.Refresh/></span>
+            <span onClick={()=>setShow(false)}><Icon.CircleX/></span>
+            <span onClick={()=>syncCaptcha()}><Icon.Refresh/></span>
             <i className={'far fa-life-ring ml-2'}/>
           </div>
         </div>

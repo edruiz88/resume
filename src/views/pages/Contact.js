@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import axios from 'axios';
+import React, {useState} from 'react'
 import * as Icon from '../../components/icons'
+import axios from 'axios'
 import validate from '../../components/ValidForm'
 
 function Contact(){
@@ -82,18 +82,21 @@ const handleChange = evt => {
        Object.values(values).length && // all fields were touched
      Object.values(formValidation.touched).every(t => t === true) // every touched field is true
    ) {
-      const formData = {name:values.name,email:values.email,subject:values.subject,msg:values.message}
       setLoading(true)
-      await axios({
+      await fetch('/sendmail',{
          method:'POST',
-         url:'https://eruiz.netlify.app/sendmail',
-         data:formData,
+         body:JSON.stringify(values),
          headers: {'Content-Type': 'application/json'}
      })
-     .then((res)=>{
+     .then(res=>{console.log(res);res.json()})
+     .then(res=>{
+      console.log(res)
          setSuccess(true)
          setLoading(false)
-      }).catch((err)=>{console.log(err)})
+      }).catch((err)=>{
+        setLoading(false)
+        console.log(err)
+      })
    }
  }
 
@@ -147,6 +150,7 @@ const handleChange = evt => {
                <h1>Thank you!</h1>
                <div>I appreciate that you've taken the time to write me.</div>
                <div>I'll get back to you very soon.</div>
+               <button className='btn btn-about hire mt2' onClick={()=>setSuccess(false)}>Send another message</button>  
             </div>}
         </div>
           

@@ -94,7 +94,7 @@ return(
             maxLength="1000"
             className="input_field"
             name="emo_comment"
-            placeholder={`Tell us about your experience with this product.`}
+            placeholder={`Tell us about your experience with this Developer.`}
             rows="3">
         </textarea>
         </div>

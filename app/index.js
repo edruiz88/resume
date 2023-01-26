@@ -29,7 +29,7 @@ fastify.register(require('fastify-nodemailer'), {
   secure: true, // use TLS
   auth: {
       user: 'edruiz.dev@gmail.com',
-      pass: 'Marcador0788%'
+      pass: 'djua rbzk umvq vxbg'
   }
 })
 
@@ -42,18 +42,16 @@ fastify.get('/:any', async (request, reply) => {
 })
 
 fastify.post('/sendmail', (req, reply, next) => {
-  let { nodemailer } = fastify
-  let recipient = req.body.email
+  const { nodemailer } = fastify
+  const {name, email, subject,  message} = req.body
 
-  console.log(req.body)
-
-  var textBody = `FROM: ${req.body.name} EMAIL: ${req.body.email} MESSAGE: ${req.body.msg}`;
-	var htmlBody = `<h2>${req.body.subject}</h2><p>from: ${req.body.name} <a href="mailto:${req.body.email}">${req.body.email}</a></p><p>${req.body.msg}</p>`;
+  var textBody = `FROM: ${name} EMAIL: ${email} MESSAGE: ${message}`;
+	var htmlBody = `<h2>${subject}</h2><p>from: ${name} <a href="mailto:${email}">${email}</a></p><p>${message}</p>`;
 
     nodemailer.sendMail({
-      from: recipient,
+      from: email,
       to: 'edruiz.dev@gmail.com',
-      subject: req.body.subject, // Subject line
+      subject: subject, // Subject line
       text: textBody,
       html: htmlBody
     }, (err, info) => {

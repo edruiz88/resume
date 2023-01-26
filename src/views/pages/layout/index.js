@@ -64,8 +64,9 @@ function MainLayout({children, ...rest}){
           {sideMenu()}
         </div>}
         </nav>:''}
+           {loc!='/home'&&<h3 className="section-title">{title}</h3>}
           <div className={`page-section${loc=='/home'?' home':''}`}>
-            {loc!='/home'&&<h3 className="section-title">{title}</h3>}
+         
 
             <Scroll>
               <div className={`scroll-zone${loc=='/portfolio'?' pf':''}`}>
